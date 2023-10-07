@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(199, 201, 114, 1) 49%, rgba(20, 20, 11, 1) 100%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+    width: 215px;
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.navegacion ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.navegacion ul li {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.navegacion ul li a:hover {
+    color: #00CED1;
+}
+
+.navegacion ul li a.active {
+    color: #00CED1;
+}
+
+.contenido {
+    margin-left: 215px;
+    padding: 20px;
+}
+
+#inicio {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.perfil {
+    text-align: center;
+    background: rgb(140, 224, 227);
+    background: linear-gradient(9deg, rgba(140, 224, 227, 1) 0%, rgba(221, 211, 94, 1) 100%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.perfil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    margin-bottom: 15px;
+}
+
+.perfil h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.perfil p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+#habilidades {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#habilidades h2 {
+    text-align: center;
+    font-size: 27px;
+    letter-spacing: 1mm;
+    margin: 40px 0;
+}
+
+.habilidades-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    background: rgb(140, 224, 227);
+    background: linear-gradient(87deg, rgba(140, 224, 227, 1) 0%, rgba(221, 211, 94, 1) 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.habilidades-lista img {
+    margin-bottom: 10px;
+    height: auto;
+    width: 60px;
+}
+
+
+#contacto {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#contacto h2 {
+    margin-bottom: 20px;
+    font-size: 27px;
+    letter-spacing: 1mm;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+
+input[type="email"],
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #08595a;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        height: 50px;
+        width: 100%;
+        align-items: start;
+    }
+
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin-left: 30px;
+        font-size: 23px;
+        z-index: 1;
+    }
+
+    .navegacion {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navegacion.active {
+        display: flex;
+    }
+
+    .navegacion ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    .navegacion ul li {
+        margin-bottom: 20px;
+    }
+
+    .contenido {
+        margin: 0;
+    }
+
+    .habilidades-lista img {
+        margin-bottom: 16px;
+        height: auto;
+        width: 60px;
+    }
+
+    #inicio, #habilidades, #contacto{
+        height: auto;
+        margin-top: 60px;
+    }
+
+}
